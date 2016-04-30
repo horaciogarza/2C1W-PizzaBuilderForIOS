@@ -1,0 +1,30 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "63EB654DD80FB9F1A2A046BC47D9790B7448B27D",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "63EB654DD80FB9F1A2A046BC47D9790B7448B27D" : 0,
+    "EFE5C8870318A3F4C2940A80C46850B85AF0B25B" : 0
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "B75BD37C-D8F0-43CD-BE99-225278261D6E",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "63EB654DD80FB9F1A2A046BC47D9790B7448B27D" : "Pizza%20Builder\/",
+    "EFE5C8870318A3F4C2940A80C46850B85AF0B25B" : ".."
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "Pizza Builder",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "Pizza Builder.xcodeproj",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/horaciogarza\/PizzaBuilder.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "63EB654DD80FB9F1A2A046BC47D9790B7448B27D"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/horaciogarza\/ITESMSwiftCertification.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "EFE5C8870318A3F4C2940A80C46850B85AF0B25B"
+    }
+  ]
+}

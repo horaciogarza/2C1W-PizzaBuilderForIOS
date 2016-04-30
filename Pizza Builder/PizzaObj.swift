@@ -9,17 +9,58 @@
 import Foundation
 
 public class 🍕{
+   
+    static var sharedPizza:🍕 = 🍕()
     
-    var tamaño: String;
-    var masa:String;
-    var ingredientes: [String] = [String]()
-    var queso: String
     
-    init(tamaño: String, masa: String, ingredientes: [String], queso: String){
-        self.ingredientes = ingredientes
-        self.masa = masa
-        self.queso = queso
-        self.tamaño = tamaño
+    var cTamaño: String?
+    var cMasa:String?
+    var cIngredientes: [String]?
+    var cQueso: String?
+    
+    var ingredientes:[String]?{
+        get{
+            return self.cIngredientes!
+        }
+        set(ingredientes){
+            self.cIngredientes = ingredientes;
+        }
+    }
+
+    var queso:String?{
+        get{
+            return self.cQueso!
+        }
+        set(queso){
+            self.cQueso = queso;
+        }
+    }
+
+    
+    var masa:String?{
+        get{
+            return self.cMasa!
+        }
+        set(masa){
+            self.cMasa = masa
+        }
+    }
+
+    var tamaño:String?{
+        get{
+            return self.cTamaño!
+        }
+        set(tamaño){
+            self.cTamaño = tamaño;
+        }
+    }
+    
+    init(){
+        
+        self.cIngredientes = nil;
+        self.cMasa = nil;
+        self.cQueso = nil;
+        self.cTamaño = nil;
     }
     
     

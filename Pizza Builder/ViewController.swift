@@ -41,6 +41,8 @@ class ViewController: UIViewController {
     }
     @IBAction func submit(sender: AnyObject) {
         
+        🍕.sharedPizza.tamaño = getValueFromSlider();
+        
     }
 
 }
