@@ -38,23 +38,43 @@ class FinalViewController: UIViewController {
     */
     @IBAction func updateLabels(sender: AnyObject) {
         
+        var countOfThem = 0;
         if 🍕.sharedPizza.masa != nil {
             masaLabel.text = 🍕.sharedPizza.masa;
+            countOfThem += 1
         }
         if 🍕.sharedPizza.queso != nil {
             quesoLabel.text = 🍕.sharedPizza.queso;
+            countOfThem += 1
         }
         if 🍕.sharedPizza.tamaño != nil {
             tamañoLabel.text = 🍕.sharedPizza.tamaño;
+            countOfThem += 1
         }
         
         if 🍕.sharedPizza.cIngredientes != nil {
+            countOfThem += 1
             var textToSet: String = " "
             for value in 🍕.sharedPizza.cIngredientes!{
                 textToSet += String(value) + ", "
                 
             }
+            
             ingredientesLabel.text = textToSet;
+        }
+        
+        if countOfThem == 4 {
+            let alertController = UIAlertController(title: "🍕 💁🏻", message:
+                "Orden en Camino", preferredStyle: UIAlertControllerStyle.Alert)
+            alertController.addAction(UIAlertAction(title: "Dismiss", style: UIAlertActionStyle.Default,handler: nil))
+            
+            self.presentViewController(alertController, animated: true, completion: nil)
+        }else{
+            let alertController = UIAlertController(title: "🍕🙅🏻", message:
+                "Selecciona los campos faltantes antes de ordenar!", preferredStyle: UIAlertControllerStyle.Alert)
+            alertController.addAction(UIAlertAction(title: "Dismiss", style: UIAlertActionStyle.Default,handler: nil))
+            
+            self.presentViewController(alertController, animated: true, completion: nil)
         }
         
     }

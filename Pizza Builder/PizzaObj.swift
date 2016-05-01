@@ -31,7 +31,7 @@ public class 🍕{
 
     var queso:String?{
         get{
-            return self.cQueso!
+            return self.cQueso
         }
         set(queso){
             self.cQueso = queso;
@@ -41,7 +41,7 @@ public class 🍕{
     
     var masa:String?{
         get{
-            return self.cMasa!
+            return self.cMasa
         }
         set(masa){
             self.cMasa = masa
@@ -50,7 +50,7 @@ public class 🍕{
 
     var tamaño:String?{
         get{
-            return self.cTamaño!
+            return self.cTamaño
         }
         set(tamaño){
             self.cTamaño = tamaño;
