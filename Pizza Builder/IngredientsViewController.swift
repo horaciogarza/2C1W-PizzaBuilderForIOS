@@ -23,22 +23,10 @@ class IngredientsViewController: UIViewController {
     @IBOutlet weak var anchoa: UISwitch!
     @IBOutlet weak var jalapeño: UISwitch!
    
-    
-    //Declaration of the variables in a dictionary
-    private var ingredientes: [String: Bool] = ["jamon": jamon.on,"pepperoni":   pepperoni.on
-        ,"pavo":   pavo.on
-        ,"salchicha":   salchicha.on
-        ,"cebolla":   cebolla.on
-        ,"pimiento":   pimiento.on
-        ,"piña":   piña.on
-        ,"aceituna":   aceituna.on
-        ,"anchoa":   anchoa.on
-        ,"jalapeño":   jalapeño.on]
-    
-    
-    
     override func viewDidLoad() {
         super.viewDidLoad()
+        //Declaration of the variables in a dictionary
+        
 
         // Do any additional setup after loading the view.
     }
@@ -49,6 +37,44 @@ class IngredientsViewController: UIViewController {
     }
     
     //Seleccionar de uno a cinco ingredientes: jamón, pepperoni, pavo, salchicha, aceituna, cebolla, pimiento, piña, anchoa, etc.
+    @IBAction func agregaIngredientes(sender: AnyObject){
+        
+       var ingredientes: [String: Bool] = ["jamon": jamon.on,"pepperoni":   pepperoni.on
+            ,"pavo":   pavo.on
+            ,"salchicha":   salchicha.on
+            ,"cebolla":   cebolla.on
+            ,"pimiento":   pimiento.on
+            ,"piña":   piña.on
+            ,"aceituna":   aceituna.on
+            ,"anchoa":   anchoa.on
+        ,"jalapeño":   jalapeño.on];
+        
+        ingredientes["jamon"] = true;
+        
+        var ingredientesAInsertar:[String]? = [String]();
+        
+        for (key, value) in ingredientes{
+            
+            if value {
+                ingredientesAInsertar?.append(key)
+                
+            }
+            
+        }
+        
+        🍕.sharedPizza.cIngredientes = ingredientesAInsertar
+        
+        print("masa: ", 🍕.sharedPizza.masa!,
+              "Queso: ", 🍕.sharedPizza.queso!,
+              "Tamaño: ", 🍕.sharedPizza.tamaño!)
+        
+        print("Ingredientes: ")
+        
+        🍕.sharedPizza.ingredientesToString();
+        //Evaluation of the Selected ingredients
+        
+        
+    }
     
   
 }

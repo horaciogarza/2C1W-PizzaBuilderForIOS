@@ -20,6 +20,8 @@ class TipoMasaViewController: UIViewController, UIPickerViewDataSource, UIPicker
         // Do any additional setup after loading the view.
         picker.delegate = self
         picker.dataSource = self
+        self.picker.dataSource = self;
+        self.picker.delegate = self;
         
     }
     
@@ -37,6 +39,7 @@ class TipoMasaViewController: UIViewController, UIPickerViewDataSource, UIPicker
     
     func pickerView(pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
         print(pickerData[row])
+        🍕.sharedPizza.masa = String(pickerData[row])
     }
     
     
@@ -48,7 +51,6 @@ class TipoMasaViewController: UIViewController, UIPickerViewDataSource, UIPicker
     
 
     @IBAction func submit(sender: AnyObject) {
-        🍕.sharedPizza.masa = String(picker.selectedRowInComponent);
     }
    
     

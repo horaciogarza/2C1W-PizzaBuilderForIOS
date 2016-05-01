@@ -20,6 +20,8 @@ class CheeseViewController: UIViewController, UIPickerViewDelegate, UIPickerView
         // Do any additional setup after loading the view.
         picker.delegate = self
         picker.dataSource = self
+        self.picker.dataSource = self;
+        self.picker.delegate = self;
         
     }
     
@@ -37,6 +39,7 @@ class CheeseViewController: UIViewController, UIPickerViewDelegate, UIPickerView
     
     func pickerView(pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
         print(pickerData[row])
+        🍕.sharedPizza.queso = String(pickerData[row])
     }
     
 
@@ -46,6 +49,7 @@ class CheeseViewController: UIViewController, UIPickerViewDelegate, UIPickerView
     }
     
 
+    
     /*
     // MARK: - Navigation
 
@@ -56,7 +60,7 @@ class CheeseViewController: UIViewController, UIPickerViewDelegate, UIPickerView
     }
     */
     @IBAction func submitCheese(sender: AnyObject) {
-        🍕.sharedPizza.queso = String(picker.selectedRowInComponent)
+        
     }
 
 }

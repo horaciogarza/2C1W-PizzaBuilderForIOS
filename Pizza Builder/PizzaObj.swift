@@ -13,19 +13,21 @@ public class 🍕{
     static var sharedPizza:🍕 = 🍕()
     
     
-    var cTamaño: String?
-    var cMasa:String?
+    private var cTamaño: String?
+    private var cMasa:String?
     var cIngredientes: [String]?
-    var cQueso: String?
+    private var cQueso: String?
     
     var ingredientes:[String]?{
         get{
-            return self.cIngredientes!
+            return self.cIngredientes
         }
-        set(ingredientes){
+        set{
             self.cIngredientes = ingredientes;
         }
     }
+    
+    
 
     var queso:String?{
         get{
@@ -63,5 +65,15 @@ public class 🍕{
         self.cTamaño = nil;
     }
     
+    
+    public func ingredientesToString(){
+        
+        if cIngredientes != nil {
+            for value in cIngredientes!{
+                print(value)
+            }
+        }
+        
+    }
     
 }
