@@ -4,76 +4,91 @@
 //
 //  Created by Horacio Garza on 28/04/16.
 //  Copyright © 2016 Horacio Garza. All rights reserved.
-//
+
+
+
+
+/*Seleccionar el tamaño de la pizza: chica, mediana, grande
+ 
+ Seleccionar el tipo de masa: delgada, crujiente, gruesa
+ 
+ Seleccionar el tipo de queso: mozarela, cheddar, parmesano, sin queso
+ 
+ Seleccionar de uno a cinco ingredientes: jamón, pepperoni, pavo, salchicha, aceituna, cebolla, pimiento, piña, anchoa, etc. */
+
 
 import Foundation
 
-public class 🍕{
+
+enum Masa{
+    case delgada;
+    case crujiente;
+    case gruesa
+}
+
+enum Queso{
+    case mozarela
+    case cheddar
+    case parmesano
+    case sinQueso
+}
+
+enum Tamaño{
+    case chica
+    case mediana
+    case grande
+}
+
+
+struct Direccion{
+    
+    var numero:Int?
+    var calle:String?
+    var colonia:String?
+    var numeroTelefonico:String?
+    
+    init(){
+        self.numero = 0
+        self.calle = ""
+        self.colonia = ""
+        self.numeroTelefonico = ""
+    }
+}
+
+
+public class Pizza{
    
-    static var sharedPizza:🍕 = 🍕()
+    static var sharedPizza:Pizza = Pizza()
     
     
-    private var cTamaño: String?
-    private var cMasa:String?
-    var cIngredientes: [String]?
-    private var cQueso: String?
+    var queso:Queso?
+    var tamaño:Tamaño?
+    var masa:Masa?
+    var direccion:Direccion?
     
-    var ingredientes:[String]?{
-        get{
-            return self.cIngredientes
-        }
-        set{
-            self.cIngredientes = ingredientes;
-        }
-    }
-    
-    
+    var ingredientesDisponibles:NSDictionary = ["jamon": false,"peperonni": false,"pavo": false,
+                                     "salchicha": false,"aceituna": false,"cebolla": false,
+                                     "pimiento": false,"piña": false, "anchoa": false]
 
-    var queso:String?{
-        get{
-            return self.cQueso
-        }
-        set(queso){
-            self.cQueso = queso;
-        }
-    }
-
+    var ingredientes:Array<String>?
     
-    var masa:String?{
-        get{
-            return self.cMasa
-        }
-        set(masa){
-            self.cMasa = masa
-        }
-    }
-
-    var tamaño:String?{
-        get{
-            return self.cTamaño
-        }
-        set(tamaño){
-            self.cTamaño = tamaño;
-        }
-    }
     
     init(){
         
-        self.cIngredientes = nil;
-        self.cMasa = nil;
-        self.cQueso = nil;
-        self.cTamaño = nil;
     }
     
-    
-    public func ingredientesToString(){
-        
-        if cIngredientes != nil {
-            for value in cIngredientes!{
-                print(value)
-            }
+    func checkIfComplete() -> Bool{
+        guard self.ingredientes == nil && self.masa == nil && self.queso == nil && self.tamaño == nil && self.direccion == nil else {
+            // Value requirements not met, do something
+            return true
         }
         
+        return false;
     }
     
+    
 }
+
+
+
+
