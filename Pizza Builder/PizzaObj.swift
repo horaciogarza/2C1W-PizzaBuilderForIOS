@@ -27,7 +27,7 @@ enum Masa{
 }
 
 enum Queso{
-    case mozarela
+    case mozarella
     case cheddar
     case parmesano
     case sinQueso
@@ -66,7 +66,7 @@ public class Pizza{
     var masa:Masa?
     var direccion:Direccion?
     
-    var ingredientesDisponibles:NSDictionary = ["jamon": false,"peperonni": false,"pavo": false,
+    var ingredientesDisponibles:NSMutableDictionary = ["jamon": false,"peperonni": false,"pavo": false,
                                      "salchicha": false,"aceituna": false,"cebolla": false,
                                      "pimiento": false,"piña": false, "anchoa": false]
 
