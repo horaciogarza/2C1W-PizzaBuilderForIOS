@@ -66,9 +66,11 @@ public class Pizza{
     var masa:Masa?
     var direccion:Direccion?
     
-    var ingredientesDisponibles:NSMutableDictionary = ["jamon": false,"peperonni": false,"pavo": false,
-                                     "salchicha": false,"aceituna": false,"cebolla": false,
-                                     "pimiento": false,"piña": false, "anchoa": false]
+    
+    var ingredientesDisponibles:NSMutableDictionary = ["jamon": true, "peperonni": false, "pavo": false,
+                                                      "salchicha": false, "aceituna": false, "cebolla": false,
+                                                      "pimiento": false, "piña": false, "anchoa": false]
+    
 
     var ingredientes:Array<String>?
     

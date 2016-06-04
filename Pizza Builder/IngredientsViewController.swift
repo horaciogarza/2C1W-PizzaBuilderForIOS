@@ -9,18 +9,50 @@
 import UIKit
 
 class IngredientsViewController: UIViewController {
-
+    
+    let ingredient: Array<String> = ["jamon", "peperonni", "pavo", "salchicha", "aceituna", "cebolla", "pimiento", "piña", "anchoa"];
     @IBOutlet var collectionOfSwitches: Array<UISwitch>?
     
-    @IBAction func setJamon(sender: UISwitch) {
-        Pizza.sharedPizza.ingredientesDisponibles.setValue(!(Pizza.sharedPizza.ingredientesDisponibles.valueForKey("jamon") as! Bool), forKey: "jamon")
-        print(Pizza.sharedPizza.ingredientesDisponibles.valueForKey("jamon") as! Bool)
+    
+    @IBAction func switchDidChange(sender: AnyObject) {
+        
+        let selectedSwitch = sender as! UISwitch;
+        let ingredienteString:String = getIngredient(selectedSwitch.tag - 1)
+        print("Ingrediente Seleccionado: \(ingredienteString), Index: \(selectedSwitch.tag - 1)")
+        
+        print("Current value: \(Pizza.sharedPizza.ingredientesDisponibles[ingredienteString] as! Bool) Changed to: \(!(Pizza.sharedPizza.ingredientesDisponibles[ingredienteString] as! Bool))")
+        
+        
+        Pizza.sharedPizza.ingredientesDisponibles.setValue(!(Pizza.sharedPizza.ingredientesDisponibles[ingredienteString] as! Bool), forKey: ingredienteString)
+        
+    }
+    
+    
+    //Get ingredient
+    func getIngredient(index: Int) -> String{
+        return ingredient[index]
+    }
+    
+    //Get Index
+    func getIndex(key: String) -> Int{
+        return ingredient.indexOf(key)!
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        
+        //TODO: Checar los que ya fueron seleccionados
+        for (key, value) in Pizza.sharedPizza.ingredientesDisponibles {
+            if (value as! Bool) {
+                let index = getIndex(key as! String)
+                
+                collectionOfSwitches![index].setOn(!collectionOfSwitches![index].on, animated: false)
+            }
+        }
+        
+        
         
         
     }
