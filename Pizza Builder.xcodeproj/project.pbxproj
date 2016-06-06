@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		474958AA1D04029A00414BBF /* AdressViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 474958A91D04029A00414BBF /* AdressViewController.swift */; };
 		477DEE431CD2F439001CB477 /* PizzaObj.swift in Sources */ = {isa = PBXBuildFile; fileRef = 477DEE421CD2F439001CB477 /* PizzaObj.swift */; };
 		47837C181CFBF93D00369323 /* SizeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47837C171CFBF93D00369323 /* SizeViewController.swift */; };
 		479561791CFD419500CE68D8 /* BreadTypeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 479561781CFD419500CE68D8 /* BreadTypeViewController.swift */; };
@@ -19,6 +20,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		474958A91D04029A00414BBF /* AdressViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AdressViewController.swift; sourceTree = "<group>"; };
 		477DEE421CD2F439001CB477 /* PizzaObj.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PizzaObj.swift; path = "Pizza Builder/PizzaObj.swift"; sourceTree = "<group>"; };
 		47837C171CFBF93D00369323 /* SizeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SizeViewController.swift; sourceTree = "<group>"; };
 		479561781CFD419500CE68D8 /* BreadTypeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BreadTypeViewController.swift; sourceTree = "<group>"; };
@@ -43,6 +45,18 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		474958AB1D0402AF00414BBF /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				4795617A1CFD45A700CE68D8 /* RealBreadTypeViewController.swift */,
+				4795617C1CFD4A9D00CE68D8 /* IngredientsViewController.swift */,
+				474958A91D04029A00414BBF /* AdressViewController.swift */,
+				479561781CFD419500CE68D8 /* BreadTypeViewController.swift */,
+				47837C171CFBF93D00369323 /* SizeViewController.swift */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
 		47AD22491CD1E14B0089CBFA = {
 			isa = PBXGroup;
 			children = (
@@ -63,12 +77,9 @@
 		47AD22541CD1E14B0089CBFA /* Pizza Builder */ = {
 			isa = PBXGroup;
 			children = (
+				474958AB1D0402AF00414BBF /* Controllers */,
 				47AD22551CD1E14B0089CBFA /* AppDelegate.swift */,
 				47AD22591CD1E14B0089CBFA /* Main.storyboard */,
-				4795617A1CFD45A700CE68D8 /* RealBreadTypeViewController.swift */,
-				4795617C1CFD4A9D00CE68D8 /* IngredientsViewController.swift */,
-				479561781CFD419500CE68D8 /* BreadTypeViewController.swift */,
-				47837C171CFBF93D00369323 /* SizeViewController.swift */,
 				47AD225C1CD1E14B0089CBFA /* Assets.xcassets */,
 				47AD225E1CD1E14B0089CBFA /* LaunchScreen.storyboard */,
 				47AD22611CD1E14B0089CBFA /* Info.plist */,
@@ -152,6 +163,7 @@
 				47AD22561CD1E14B0089CBFA /* AppDelegate.swift in Sources */,
 				4795617D1CFD4A9D00CE68D8 /* IngredientsViewController.swift in Sources */,
 				4795617B1CFD45A700CE68D8 /* RealBreadTypeViewController.swift in Sources */,
+				474958AA1D04029A00414BBF /* AdressViewController.swift in Sources */,
 				479561791CFD419500CE68D8 /* BreadTypeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

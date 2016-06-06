@@ -18,41 +18,53 @@
 
 
 import Foundation
+import UIKit
 
 
-enum Masa{
-    case delgada;
-    case crujiente;
-    case gruesa
+enum Masa: String{
+    case delgada = "Delgada";
+    case crujiente = "Crujiente";
+    case gruesa = "Gruesa"
 }
 
-enum Queso{
-    case mozarella
-    case cheddar
-    case parmesano
-    case sinQueso
+enum Queso:String{
+    case mozarella = "Mozarella"
+    case cheddar = "Cheddar"
+    case parmesano = "Parmesano"
+    case sinQueso = "Sin Queso"
 }
 
-enum Tamaño{
-    case chica
-    case mediana
-    case grande
+enum Tamaño: String{
+    case chica = "Chica"
+    case mediana = "Mediana"
+    case grande = "Grande"
 }
 
+enum form: ErrorType{
+    case Empty
+    case Short
+    case Complete
+}
 
 struct Direccion{
     
-    var numero:Int?
+    var numeroExterior:Int?
     var calle:String?
     var colonia:String?
     var numeroTelefonico:String?
+    var completeForm:Bool = false;
     
     init(){
-        self.numero = 0
+        self.numeroExterior = 0
         self.calle = ""
         self.colonia = ""
         self.numeroTelefonico = ""
     }
+    
+    
+      
+    
+    
 }
 
 
@@ -70,14 +82,39 @@ public class Pizza{
     var ingredientesDisponibles:NSMutableDictionary = ["jamon": true, "peperonni": false, "pavo": false,
                                                       "salchicha": false, "aceituna": false, "cebolla": false,
                                                       "pimiento": false, "piña": false, "anchoa": false]
-    
-
     var ingredientes:Array<String>?
-    
     
     init(){
         
     }
+    
+    
+    /**
+     Function that returns the values of the Pizza that will be ordered and Adress
+     
+     - returns: (pizzaValues, adressValues)
+     */
+    func pizzaToString() -> (NSDictionary, NSDictionary) {
+        
+        let pizzaValues:NSMutableDictionary = NSMutableDictionary()
+        let adressValues:NSMutableDictionary = NSMutableDictionary()
+        
+        //Pizza Values
+        pizzaValues["Queso"] = String(self.queso?.rawValue)
+        pizzaValues["Tamaño"] = String(self.tamaño?.rawValue)
+        pizzaValues["Masa"] = String(self.masa?.rawValue)
+        pizzaValues["test"] = String(self.direccion?.calle)
+        
+        //Adress Values
+        adressValues["Calle"] = String(self.direccion?.calle!)
+        adressValues["Numero Exterior"] = String(self.direccion?.numeroExterior!)
+        adressValues["Colonia"] = String(self.direccion?.colonia!)
+        adressValues["Numero de Telefono"] = String(self.direccion?.numeroTelefonico!)
+        
+        return (pizzaValues as NSDictionary, adressValues as NSDictionary)
+    }
+    
+    
     
     func checkIfComplete() -> Bool{
         guard self.ingredientes == nil && self.masa == nil && self.queso == nil && self.tamaño == nil && self.direccion == nil else {
@@ -87,6 +124,10 @@ public class Pizza{
         
         return false;
     }
+    
+    
+    
+    
     
     
 }
