@@ -79,7 +79,7 @@ public class Pizza{
     var direccion:Direccion?
     
     
-    var ingredientesDisponibles:NSMutableDictionary = ["jamon": true, "peperonni": false, "pavo": false,
+    var ingredientesDisponibles = ["jamon": false, "peperonni": false, "pavo": false,
                                                       "salchicha": false, "aceituna": false, "cebolla": false,
                                                       "pimiento": false, "piña": false, "anchoa": false]
     var ingredientes:Array<String>?
@@ -89,6 +89,17 @@ public class Pizza{
     }
     
     
+    func getIngredients() -> [String]{
+        var ingredientes = [String]()
+        
+        for name in ingredientesDisponibles.keys {
+            if (ingredientesDisponibles[name] == true) {
+                ingredientes.append(name)
+            }
+        }
+        
+        return ingredientes
+    }
     /**
      Function that returns the values of the Pizza that will be ordered and Adress
      
@@ -103,7 +114,7 @@ public class Pizza{
         pizzaValues["Queso"] = String(self.queso?.rawValue)
         pizzaValues["Tamaño"] = String(self.tamaño?.rawValue)
         pizzaValues["Masa"] = String(self.masa?.rawValue)
-        pizzaValues["test"] = String(self.direccion?.calle)
+        
         
         //Adress Values
         adressValues["Calle"] = String(self.direccion?.calle!)

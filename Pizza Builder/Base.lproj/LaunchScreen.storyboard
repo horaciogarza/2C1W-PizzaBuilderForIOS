@@ -1,8 +1,10 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" initialViewController="01J-lp-oVM">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" initialViewController="01J-lp-oVM">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -14,14 +16,52 @@
                         <viewControllerLayoutGuide type="bottom" id="xb3-aO-Qok"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="Ze5-6b-2t3">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="pizza-logo" translatesAutoresizingMaskIntoConstraints="NO" id="UYT-PL-zAv">
+                                <rect key="frame" x="63" y="150" width="248" height="132.5"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="UYT-PL-zAv" secondAttribute="height" multiplier="15:8" id="Ycx-Kq-Dr8"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pizza Builder" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="B76-9H-vw1">
+                                <rect key="frame" x="93" y="318.5" width="188" height="31"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="33"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Horacio Garza" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bvq-9w-bek">
+                                <rect key="frame" x="132" y="398" width="110" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="bvq-9w-bek" secondAttribute="height" multiplier="110:21" id="pMU-EW-EXt"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="B76-9H-vw1" firstAttribute="top" secondItem="UYT-PL-zAv" secondAttribute="bottom" constant="36" id="J12-dd-tCZ"/>
+                            <constraint firstItem="B76-9H-vw1" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="NAp-st-Kji"/>
+                            <constraint firstItem="bvq-9w-bek" firstAttribute="top" secondItem="B76-9H-vw1" secondAttribute="bottom" constant="48.5" id="SzB-Pz-Psl"/>
+                            <constraint firstItem="UYT-PL-zAv" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leadingMargin" constant="47" id="aDW-g7-VHF"/>
+                            <constraint firstItem="UYT-PL-zAv" firstAttribute="top" secondItem="Llm-lL-Icb" secondAttribute="bottom" constant="130" id="bkm-6a-RSN"/>
+                            <constraint firstItem="bvq-9w-bek" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="eBZ-Vy-7WQ"/>
+                            <constraint firstItem="B76-9H-vw1" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="eFn-Bn-fXh"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="UYT-PL-zAv" secondAttribute="trailing" constant="48" id="iNm-iX-ZmJ"/>
+                            <constraint firstItem="UYT-PL-zAv" firstAttribute="centerX" secondItem="B76-9H-vw1" secondAttribute="centerX" id="jFD-KI-TtM"/>
+                        </constraints>
                     </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iYj-Kq-Ea1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="53" y="375"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="pizza-logo" width="500" height="307"/>
+    </resources>
 </document>

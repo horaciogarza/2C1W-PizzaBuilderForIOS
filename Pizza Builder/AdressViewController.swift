@@ -9,17 +9,7 @@
 import UIKit
 // MARK: - Hitest
 
-// Put this piece of code anywhere you like
-extension UIViewController {
-    func hideKeyboardWhenTappedAround() {
-        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(UIViewController.dismissKeyboard))
-        view.addGestureRecognizer(tap)
-    }
-    
-    func dismissKeyboard() {
-        view.endEditing(true)
-    }
-}
+
 
 
 
@@ -94,6 +84,9 @@ class AdressViewController: UIViewController {
      */
     
     
+    @IBAction func onViewTap(sender: AnyObject) {
+        self.view.endEditing(true)
+    }
     
     /**
      Check if the current variables are complete

@@ -20,10 +20,13 @@ class IngredientsViewController: UIViewController {
         let ingredienteString:String = getIngredient(selectedSwitch.tag - 1)
         print("Ingrediente Seleccionado: \(ingredienteString), Index: \(selectedSwitch.tag - 1)")
         
-        print("Current value: \(Pizza.sharedPizza.ingredientesDisponibles[ingredienteString] as! Bool) Changed to: \(!(Pizza.sharedPizza.ingredientesDisponibles[ingredienteString] as! Bool))")
+        print("\(Pizza.sharedPizza.ingredientesDisponibles[ingredienteString])", terminator: "")
         
+        Pizza.sharedPizza.ingredientesDisponibles[ingredienteString] = !Pizza.sharedPizza.ingredientesDisponibles[ingredienteString]!
+        print(" changed to \(Pizza.sharedPizza.ingredientesDisponibles[ingredienteString])")
+
         
-        Pizza.sharedPizza.ingredientesDisponibles.setValue(!(Pizza.sharedPizza.ingredientesDisponibles[ingredienteString] as! Bool), forKey: ingredienteString)
+
         
     }
     
@@ -45,8 +48,8 @@ class IngredientsViewController: UIViewController {
         
         //TODO: Checar los que ya fueron seleccionados
         for (key, value) in Pizza.sharedPizza.ingredientesDisponibles {
-            if (value as! Bool) {
-                let index = getIndex(key as! String)
+            if (value) {
+                let index = getIndex(key)
                 
                 collectionOfSwitches![index].setOn(!collectionOfSwitches![index].on, animated: false)
             }

@@ -17,6 +17,7 @@
 		47AD225B1CD1E14B0089CBFA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 47AD22591CD1E14B0089CBFA /* Main.storyboard */; };
 		47AD225D1CD1E14B0089CBFA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 47AD225C1CD1E14B0089CBFA /* Assets.xcassets */; };
 		47AD22601CD1E14B0089CBFA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 47AD225E1CD1E14B0089CBFA /* LaunchScreen.storyboard */; };
+		47E0070A1D6A5AD800E7A288 /* ConfirmationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47E007091D6A5AD800E7A288 /* ConfirmationViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,7 @@
 		47AD225C1CD1E14B0089CBFA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		47AD225F1CD1E14B0089CBFA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		47AD22611CD1E14B0089CBFA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		47E007091D6A5AD800E7A288 /* ConfirmationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConfirmationViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -48,6 +50,7 @@
 		474958AB1D0402AF00414BBF /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				47E007091D6A5AD800E7A288 /* ConfirmationViewController.swift */,
 				4795617A1CFD45A700CE68D8 /* RealBreadTypeViewController.swift */,
 				4795617C1CFD4A9D00CE68D8 /* IngredientsViewController.swift */,
 				474958A91D04029A00414BBF /* AdressViewController.swift */,
@@ -164,6 +167,7 @@
 				4795617D1CFD4A9D00CE68D8 /* IngredientsViewController.swift in Sources */,
 				4795617B1CFD45A700CE68D8 /* RealBreadTypeViewController.swift in Sources */,
 				474958AA1D04029A00414BBF /* AdressViewController.swift in Sources */,
+				47E0070A1D6A5AD800E7A288 /* ConfirmationViewController.swift in Sources */,
 				479561791CFD419500CE68D8 /* BreadTypeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
